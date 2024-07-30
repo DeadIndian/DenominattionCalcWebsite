@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Denomination Calculator</title>
+	<div style="text-align: center;">
+		<h1>Denomination Calculator</h1>
+	</div>
+</head>
+
+<body>
+	<table style="border: 10px solid black;width: 100%;table-layout: fixed;">
+		<tr>
+	    	<th style="border: 2px solid black;text-align: center;font-size: large;" colspan='3'>Enter The Amount</td>
+	  	</tr>
+	  	<tr>
+	  		<td style="text-align: center;background-color: pink;border: 1px solid darkred;font-size: medium;">Note Value</td>
+	  		<td style="text-align: center;background-color: pink;border: 1px solid darkred;font-size: medium;">Number of Notes</td>
+	  		<td style="text-align: center;background-color: pink;border: 1px solid darkred;font-size: medium;">Total amount</td>
+	  	</tr>
+	  	<tr>
+		  	<form method="POST" action="" id="myForm">
+		  		{% csrf_token %}
+			  	<!-- {% for v in val %}
+			  		<tr>
+			  			<td style="text-align: center;background-color: skyblue;">{{ v.name }}</td>
+			  			<td><input style="text-align: center;width: 99%;" type="number" name="{{v.id}}"></td>
+			  			<td style="text-align: center;background-color: skyblue;"><label for="{{v.id}}" id="c{{v.id}}">{{inp}}</label></td>
+			  		</tr>
+			  	{% endfor %} -->
+		  		<tr>
+			  		<td style="text-align: center;background-color: skyblue;">2000</td>
+			  		<td><input style="text-align: center;width: 99%;" type="text" name="2" value={{v2}}></td>
+			  		<td style="text-align: center;background-color: skyblue;"><label for="2">{{inp2}}</label></td>
+			  	</tr>
+			  	<tr>
+			  		<td style="text-align: center;background-color: skyblue;">500</td>
+			  		<td><input style="text-align: center;width: 99%;" type="text" name="4" value={{v4}}></td>
+			  		<td style="text-align: center;background-color: skyblue;"><label for="4">{{inp4}}</label></td>
+			  	</tr>
+			  	<tr>
+			  		<td style="text-align: center;background-color: skyblue;">200</td>
+			  		<td><input style="text-align: center;width: 99%;" type="text" name="5" value={{v5}}></td>
+			  		<td style="text-align: center;background-color: skyblue;"><label for="5">{{inp5}}</label></td>
+			  	</tr>
+			  	<tr>
+			  		<td style="text-align: center;background-color: skyblue;">100</td>
+			  		<td><input style="text-align: center;width: 99%;" type="text" name="6" value={{v6}}></td>
+			  		<td style="text-align: center;background-color: skyblue;"><label for="6">{{inp6}}</label></td>
+			  	</tr>
+			  	<tr>
+			  		<td style="text-align: center;background-color: skyblue;">50</td>
+			  		<td><input style="text-align: center;width: 99%;" type="text" name="7" value={{v7}}></td>
+			  		<td style="text-align: center;background-color: skyblue;"><label for="7">{{inp7}}</label></td>
+			  	</tr>
+			  	<tr>
+			  		<td style="text-align: center;background-color: skyblue;">20</td>
+			  		<td><input style="text-align: center;width: 99%;" type="text" name="8" value={{v8}}></td>
+			  		<td style="text-align: center;background-color: skyblue;"><label for="8">{{inp8}}</label></td>
+			  	</tr>
+			  	<tr>
+			  		<td style="text-align: center;background-color: skyblue;">10</td>
+			  		<td><input style="text-align: center;width: 99%;" type="text" name="9" value={{v9}}></td>
+			  		<td style="text-align: center;background-color: skyblue;"><label for="9">{{inp9}}</label></td>
+			  	</tr>
+
+			  	<tr>
+	  				<td style="text-align: center;background-color: yellowgreen;border: 1px solid darkred;font-size: medium;" colspan="2">Total</td>
+	  				
+			  		<td style="text-align: center;background-color: yellowgreen;border: 1px solid darkred;font-size: medium;">{{ttln}}</td>
+	  	</tr>
+			  	
+		    	<td style="border: 2px solid black;text-align: center;font-size: large;" colspan='3'>
+		    		<button style="width: 100%;background-color: lightblue;" type="submit" name="done" value="done">Done</button>
+		    	</td>
+		  		
+		  	</form>
+		</tr>
+	</table>
+	
+</body>
+</html>
